@@ -21,7 +21,8 @@ const App = () => {
   const customStyles = {
     background: 'rgba(255, 255, 255, 0.9)',
     padding: '20px',
-    borderRadius: '10px'
+    borderRadius: '10px',
+    buttonColor: 'black'
   };
 
   return (
