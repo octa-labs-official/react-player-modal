@@ -5,6 +5,7 @@ interface ModalStyleProps {
   background?: string;
   padding?: string;
   borderRadius?: string;
+  buttonColor?: string;
 }
 
 interface VideoModalProps extends ReactPlayerProps {
@@ -41,7 +42,7 @@ const ReactPlayerModal: FC<VideoModalProps> = ({ modalStyle, ...playerProps }) =
             fontSize: '24px',
             background: 'none',
             border: 'none',
-            color: 'white',
+            color: modalStyle?.buttonColor || 'white',
             cursor: 'pointer'
           }}>X</button>
           <ReactPlayer {...playerProps} />
