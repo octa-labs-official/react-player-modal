@@ -1,6 +1,6 @@
 {
   "name": "@octa-labs/react-player-modal",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "main": "dist/bundle.cjs.js",
   "module": "dist/bundle.esm.js",
   "scripts": {
@@ -15,8 +15,22 @@
   },
   "keywords": [
     "react",
+    "react-component",
+    "player",
+    "modal",
+    "media",
     "video",
-    "player"
+    "audio",
+    "youtube",
+    "facebook",
+    "twitch",
+    "soundcloud",
+    "streamable",
+    "vimeo",
+    "wistia",
+    "dailymotion",
+    "hls",
+    "dash"
   ],
   "author": "Octa Labs",
   "license": "ISC",
