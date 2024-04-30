@@ -5,14 +5,16 @@ interface ModalStyleProps {
   background?: string;
   padding?: string;
   borderRadius?: string;
-  buttonColor?: string;
+  xColor?: string;
 }
 
 interface VideoModalProps extends ReactPlayerProps {
   modalStyle?: ModalStyleProps;
+  buttonClassName?: string;
+  buttonText?: string;     
 }
 
-const ReactPlayerModal: FC<VideoModalProps> = ({ modalStyle, ...playerProps }) => {
+const ReactPlayerModal: FC<VideoModalProps> = ({ modalStyle, buttonClassName, buttonText = "Open Video", ...playerProps }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const openModal = () => setIsOpen(true);
@@ -32,7 +34,9 @@ const ReactPlayerModal: FC<VideoModalProps> = ({ modalStyle, ...playerProps }) =
 
   return (
     <div>
-      <button onClick={openModal}>Open Video</button>
+      <button onClick={openModal} className={buttonClassName || ""}>
+        {buttonText}
+      </button>
       {isOpen && (
         <div style={defaultModalStyle}>
           <button onClick={closeModal} style={{
@@ -42,7 +46,7 @@ const ReactPlayerModal: FC<VideoModalProps> = ({ modalStyle, ...playerProps }) =
             fontSize: '24px',
             background: 'none',
             border: 'none',
-            color: modalStyle?.buttonColor || 'white',
+            color: modalStyle?.xColor || 'white',
             cursor: 'pointer'
           }}>X</button>
           <ReactPlayer {...playerProps} />

@@ -22,7 +22,7 @@ const App = () => {
     background: 'rgba(255, 255, 255, 0.9)',
     padding: '20px',
     borderRadius: '10px',
-    buttonColor: 'black'
+    xColor: 'black'
   };
 
   return (
@@ -30,6 +30,8 @@ const App = () => {
       <ReactPlayerModal 
         url="https://www.youtube.com/watch?v=dQw4w9WgXcQ" 
         modalStyle={customStyles}
+        buttonClassName="button button--secondary button--outline button--golden button--lg"
+        buttonText="Watch Demo"
       />
     </div>
   );
